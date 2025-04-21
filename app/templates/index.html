@@ -1,0 +1,80 @@
+{% extends "layout/template.html" %}
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="{{ url_for('static', filename='index/style.css') }}">
+<script defer type="module" src="{{ url_for('static', filename='index/script.js') }}"></script>
+{% endblock %}
+
+{% block title %}FullStack Challenge{% endblock %}
+
+{% block main %}
+<section class="presentation">
+  <h3>Virtual Machine Size Calculator</h3>
+  <p>With the expansion of digital systems, AB-Inbev is looking to implement virtual machines (VMs) strategically,
+    prioritizing efficiency and resource optimization.</p>
+  <p>Review the following checklist to ensure that your environment fit the requirements properly.</p>
+</section>
+<section id="vm-calculator">
+  <form>
+    <div id="form-inputs">
+      <p id="form-title">Minimal Specifications</p>
+      <label for="vcpu">
+        <p>vCPU Cores</p>
+        <input type="number" name="vcpu" id="vcpu" placeholder="Enter number of vCPU cores" required min="1">
+      </label>
+      <label for="ram">
+        <p>RAM (GB)</p>
+        <input type="number" name="ram" id="ram" placeholder="Enter RAM in GB" required min="1">
+      </label>
+      <div id="os-selection">
+        <p>Operation System</p>
+        <div id="os-selection-container">
+
+          <label class="os-option">
+            <input type="radio" name="os" value="Linux" checked>
+            <div>
+              <h4>Linux</h4>
+              <p>Open-source OS, lightweight and widely used for servers.</p>
+            </div>
+          </label>
+
+          <label class="os-option">
+            <input type="radio" name="os" value="Windows">
+            <div>
+              <h4>Windows</h4>
+              <p>Commercial OS with strong UI and application support.</p>
+            </div>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div id="form-footer">
+      <button type="submit">Calculate Optimal VM</button>
+
+      <label for="vm-select" class="dropdown-label">
+        <p>Pick your next Virtual Machine</p>
+        <select id="vm-select" name="vm-select" class="dropdown" disabled></select>
+      </label>
+    </div>
+  </form>
+  <aside>
+    <span class="title">
+      <p>Summary</p>
+    </span>
+    <hr>
+    <div id="results"></div>
+    <div id="aside-footer">
+      <Button>
+        Setup VM
+        <!-- Directly insert SVG to apply styles -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          class="lucide lucide-arrow-right-icon lucide-arrow-right">
+          <path d="M5 12h14" />
+          <path d="m12 5 7 7-7 7" />
+        </svg>
+      </Button>
+    </div>
+  </aside>
+</section>
+{% endblock %}

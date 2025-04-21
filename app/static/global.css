@@ -1,0 +1,121 @@
+:root{
+  --gold: #e5b611; /* PMS 110C */
+  --light-gold: #f5e003;
+  --light-grey: #efefef;
+  --dark-gold: #d1a33c;
+  --dark-grey: #c7c7c7;
+  --dark-grey-20: #c7c7c733;
+  --red: red;
+  --greenyellow: greenyellow;
+  --blue: #08f;
+  --beige: #d69e77;
+  --green: #959b7b;
+  --light-red: #e88475;
+  --brown: #3f1f14;
+  --white: #FFFFFF;
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-90: rgba(255, 255, 255, 0.9);
+  --black: #000000;
+  --black-10: rgba(0, 0, 0, 0.1);
+  --black-20: rgba(0, 0, 0, 0.2);
+  --black-50: rgba(0, 0, 0, 0.5);
+  --black-70: rgba(0, 0, 0, 0.7);
+  --black-80: rgba(0, 0, 0, 0.8);
+  --black-90: rgba(0, 0, 0, 0.9);
+  
+  --primary-color: var(--gold);
+  --primary-color-light: var(--light-gold);
+  --secondary-color: #f44336;
+  --background-color-dark: #000000;
+  --background-color: var(--light-grey);
+  --text-color-dark: var(--black);
+  --text-color-light: var(--white);
+  --success-color: var(--blue);
+  --error-color: var(--red);
+  --separator-color: #484848;
+  --primary-key: var(--blue);
+  --dropdown-bg: #1f1f1f;
+  --dropdown-text: #eee;
+  --dropdown-border: #555;
+  --dropdown-hover: #2a2a2a;
+  --dropdown-scrollbar: #888;
+
+
+  --font-family: 'Avantt';
+  --font-size: 16px;
+  --border-radius: 0.375rem;
+  
+  --box-shadow: 0 0px 5px 0 var(--dark-grey-50);
+  --transition: all 0.3s ease;
+  --gradient:#F5E003, #D3A238;
+
+  /*
+    * Use only Black text on a Cheers Gold Gradient background
+    * Use White, Light Gold, or Dark Gold text on a Black background
+    * Use only Black text on a Light Gray background
+    * Use only Black text on a Dark Gold background
+    * Use only Black text on a White background
+    * Use only Black text on a Light Gold background
+    * To ensure that our colors are accessible for everyone on screen, follow these rules for ADA compliance for text 12pt or smaller.
+    * Use only Black text on a Dark Gray background
+  */
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: var(--background-color);
+  color: var(--text-color-dark);
+  font-family: var(--font-family), system-ui, -apple-system, 'Segoe UI', 'Open Sans', sans-serif;
+  font-size: var(--font-size);
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+main{
+  flex: 1;
+}
+
+.hidden{
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  background-color: var(--separator-color);
+}
+
+button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  padding: .5rem .7125rem;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--white-20);
+  background-color: var(--white-10);
+  box-shadow: var(--box-shadow);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+button:hover{
+  border-color: var(--primary-color);
+  
+}
+
+svg{
+  transition: var(--transition);
+}

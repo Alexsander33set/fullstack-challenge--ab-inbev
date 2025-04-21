@@ -1,0 +1,6 @@
+#* Can be used with humao.rest-client extension
+#* This file is used to test the API when no interface was available
+GET http://localhost/api/vms
+  ?ram=4
+  &vcpu=2
+  &os=Linux HTTP/1.1
